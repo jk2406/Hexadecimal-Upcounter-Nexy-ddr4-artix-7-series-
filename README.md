@@ -91,7 +91,7 @@ Each digit updates in **hexadecimal**, rolling over after `F`.
 * **FPGA Board**: Nexys DDR4 (Xilinx Artix-7 XC7A100T)
 * **HDL Language**: SystemVerilog (IEEE 1800-2012)
 * **Software**: Xilinx Vivado Design Suite
-* **Simuator**:Verilator(Runs in linux only) and gtkWave for waveforms
+* **Simuator(optional)**:Verilator(Runs in linux only) and gtkWave for waveforms
 
 ---
 
