@@ -32,6 +32,7 @@ always_ff @( posedge clk or negedge rstn ) begin : CounterLogicBlock
                 MainCounter<='0;
             end
             else MainCounter<=MainCounter+1;
+            //Direct bit slicing 
             digit0 <= MainCounter[ 3: 0];
             digit1 <= MainCounter[ 7: 4];
             digit2 <= MainCounter[11: 8];
@@ -46,37 +47,38 @@ always_ff @( posedge clk or negedge rstn ) begin : CounterLogicBlock
    
 end
 endmodule
-//-----------------Other method of counter----------->
- // if(digit0==4'b1111) begin
+//-----------------Other method of counter(For decimal counting,a little more manual work)----------->
+
+// if(digit0==4'b1001) begin
     //     digit0<=4'b0000;
     //     digit1<=digit1+1;
     // end
     // else digit0<=digit0+1;
-    // if(digit1==4'b1111) begin
+    // if(digit1==4'b1001) begin
     //     digit1<=4'b0000;
     //     digit2<=digit1+1;
     // end
-    // if(digit2==4'b1111) begin
+    // if(digit2==4'b1001) begin
     //     digit2<=4'b0000;
     //     digit3<=digit1+1;
     // end
-    // if(digit3==4'b1111) begin
+    // if(digit3==4'b1001) begin
     //     digit3<=4'b0000;
     //     digit4<=digit1+1;
     // end
-    // if(digit4==4'b1111) begin
+    // if(digit4==4'b1001) begin
     //     digit4<=4'b0000;
     //     digit5<=digit1+1;
     // end
-    // if(digit5==4'b1111) begin
+    // if(digit5==4'b1001) begin
     //     digit5<=4'b0000;
     //     digit6<=digit1+1;
     // end
-    // if(digit6==4'b1111) begin
+    // if(digit6==4'b1001) begin
     //     digit6<=4'b0000;
     //     digit7<=digit1+1;
     // end
-    // if(digit7==4'b1111) begin
+    // if(digit7==4'b1001) begin
     //     digit0<=4'b0000;
     //     digit1<=4'b0000;
     //     digit2<=4'b0000;
@@ -85,4 +87,5 @@ endmodule
     //     digit5<=4'b0000;
     //     digit6<=4'b0000;
     //     digit7<=4'b0000;
+
     // end
