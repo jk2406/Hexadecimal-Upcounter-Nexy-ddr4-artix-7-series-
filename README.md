@@ -78,12 +78,7 @@ Each digit updates in **hexadecimal**, rolling over after `F`.
 
 ##  Getting Started
 
-1. Clone the repo:
-
-   ```bash
-   git clone https://github.com/<your-username>/hex-counter-nexysddr4.git
-   cd hex-counter-nexysddr4
-   ```
+1. Clone the repo.
 2. Open project in **Xilinx Vivado**.
 3. Add all `.sv` files and `constraints.xdc`.
 4. Synthesize, Implement, and Generate Bitstream.
